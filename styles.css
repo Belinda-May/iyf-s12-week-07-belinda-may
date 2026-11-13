@@ -1,0 +1,222 @@
+
+/* =================================
+   1. CSS RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================================
+   2. GENERAL PAGE STYLING
+================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #263238;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* =================================
+   3. TODO CONTAINER
+================================= */
+
+.todo-container {
+    background-color: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =================================
+   4. HEADER
+================================= */
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.todo-header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #273c75;
+}
+
+.todo-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* =================================
+   5. INPUT FORM
+================================= */
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#task-input:focus {
+    border-color: #487eb0;
+}
+
+#add-task-btn {
+    padding: 13px 18px;
+    background-color: #273c75;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =================================
+   6. FILTER BUTTONS
+================================= */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #f1f2f6;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #57606f;
+}
+
+.filter-btn.active {
+    background-color: #273c75;
+    color: white;
+}
+
+/* =================================
+   7. TASK LIST
+================================= */
+
+#task-list {
+    list-style: none;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #a4b0be;
+}
+
+/* =================================
+   8. DELETE BUTTON
+================================= */
+
+.delete-btn {
+    background-color: #ffecec;
+    color: #e84118;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* =================================
+   9. FOOTER
+================================= */
+
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #57606f;
+}
+
+#clear-completed {
+    border: none;
+    background: none;
+    color: #e84118;
+    cursor: pointer;
+}
+
+/* =================================
+   10. HOVER EFFECTS
+================================= */
+
+button {
+    transition: background-color 0.2s ease;
+}
+
+#add-task-btn:hover {
+    background-color: #192a56;
+}
+
+.delete-btn:hover {
+    background-color: #ffd6d6;
+}
+
+#clear-completed:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   11. MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 480px) {
+    .todo-container {
+        padding: 22px;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    #add-task-btn {
+        width: 100%;
+    }
+
+    .filters {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+    }
+}
