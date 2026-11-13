@@ -70,8 +70,9 @@ This project builds on my Week 5 JavaScript To-Do List and introduces modular Ja
 5. Open `index.html` using VS Code Live Server.
 
 ## Live Demo
-[View the live project](ADD_GITHUB_PAGES_LINK_HERE)
+[View the live project](https://belinda-may.github.io/iyf-s12-week-07-belinda-may/)
 
 ## Collaboration
-- My Pull Request: ADD_YOUR_PR_LINK
-- Peer Pull Request: ADD_PEER_PR_LINK
+- My Pull Request: https://github.com/Belinda-May/iyf-s12-week-07-belinda-may/pull/1
+- Peer Pull Request: https://github.com/Stacy-JOtieno/iyf-s12-week-07-Stacy-JOtieno/pull/3
+
