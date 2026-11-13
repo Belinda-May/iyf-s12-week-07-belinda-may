@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .product, .cart-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        #cart-section {
+            margin-top: 40px;
+        }
+
+        #cart-total {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Shopping Cart</h1>
+        <p>Items in cart: <span id="cart-count">0</span></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Products</h2>
+            <div id="product-list"></div>
+        </section>
+
+        <section id="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+
+            <p id="cart-total">Total: KSh 0</p>
+
+            <button id="clear-cart">Clear Cart</button>
+        </section>
+    </main>
+
+    <script type="module" src="cart.js"></script>
+</body>
+</html>

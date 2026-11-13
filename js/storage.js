@@ -2,7 +2,11 @@ const STORAGE_KEY = 'todo-tasks';
 
 // Save tasks to localStorage
 export function saveTasks(tasks) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+  } catch (error) {
+    console.error('Unable to save tasks:', error);
+  }
 }
 
 // Retrieve tasks from localStorage

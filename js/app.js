@@ -94,18 +94,28 @@ taskList.addEventListener('dblclick', (event) => {
   taskItem.replaceChild(editInput, event.target);
   editInput.focus();
 
-  function saveEdit() {
-    updateTasks(editTask(tasks, taskId, editInput.value));
-  }
+  let isEditing = true;
 
-  function cancelEdit() {
-    renderTasks(tasks, currentFilter);
-  }
+function saveEdit() {
+  if (!isEditing) return;
 
-  editInput.addEventListener('keydown', (keyEvent) => {
-    if (keyEvent.key === 'Enter') saveEdit();
-    if (keyEvent.key === 'Escape') cancelEdit();
-  });
+  isEditing = false;
+  updateTasks(editTask(tasks, taskId, editInput.value));
+}
+
+function cancelEdit() {
+  if (!isEditing) return;
+
+  isEditing = false;
+  renderTasks(tasks, currentFilter);
+}
+
+editInput.addEventListener('keydown', (keyEvent) => {
+  if (keyEvent.key === 'Enter') saveEdit();
+  if (keyEvent.key === 'Escape') cancelEdit();
+});
+
+editInput.addEventListener('blur', saveEdit);
 });
 
 // Clear completed tasks
