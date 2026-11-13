@@ -1,3 +1,4 @@
+
 const STORAGE_KEY = 'todo-tasks';
 
 // Save tasks to localStorage
@@ -24,8 +25,17 @@ export function loadTasks() {
       return [];
     }
 
-    return tasks;
-  } catch {
+    // Validate each saved task
+    return tasks.filter(
+      (task) =>
+        task &&
+        typeof task === 'object' &&
+        typeof task.id === 'number' &&
+        typeof task.text === 'string' &&
+        typeof task.completed === 'boolean',
+    );
+  } catch (error) {
+    console.error('Unable to load tasks:', error);
     return [];
   }
 }
