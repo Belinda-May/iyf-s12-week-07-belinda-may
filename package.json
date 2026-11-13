@@ -1,0 +1,30 @@
+{
+  "name": "iyf-week-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belinda-may/iyf-s12-week-07-belinda-may.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/belinda-may/iyf-s12-week-07-belinda-may/issues"
+  },
+  "homepage": "https://github.com/belinda-may/iyf-s12-week-07-belinda-may#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "vitest": "^5.1.0"
+  }
+}
